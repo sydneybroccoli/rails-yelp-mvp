@@ -1,0 +1,29 @@
+<div class="link-add-review">
+  <%= link_to 'ADD REVIEW', new_restaurant_review_path(@restaurant.id) %>
+</div>
+
+<div class="container">
+  <div class="restaurant-name">
+    <%= @restaurant.name %>
+  </div>
+  <div class="restaurant-category">
+    <%= @restaurant.category %>
+  </div>
+  <div class="restaurant-address">
+    <%= @restaurant.address %>
+  </div>
+  <% if !@restaurant.phone_number.nil? %>
+    <div class="restaurant-phone_number">
+      <%= @restaurant.phone_number %>
+    </div>
+  <% end %>
+</div>
+<br><br>
+<div class="container">
+  <% @reviews.each do |review| %>
+  <div class="container-review">
+    <%= review.rating %>
+    <p><%= review.content %></p>
+  </div>
+  <% end %>
+</div>

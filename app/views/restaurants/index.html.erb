@@ -1,0 +1,14 @@
+<div class="container">
+  <% @restaurants.each do |restaurant| %>
+  <div class="restaurant-name">
+    <%= link_to restaurant.name, restaurant_url(restaurant.id) %>
+  </div>
+  <div class="restaurant-category">
+    <%= restaurant.category %>
+  </div>
+  <div class="restaurant-address">
+    <%= restaurant.address %>
+  </div>
+  <hr>
+  <% end %>
+</div>

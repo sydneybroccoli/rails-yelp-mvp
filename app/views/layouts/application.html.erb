@@ -13,6 +13,15 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="navbar-link">
+        <%= link_to 'All "Yelp" Restaurants', restaurants_path %>
+      </div>
+      <div class="navbar-link">
+        <%= link_to 'New Restaurant', new_restaurant_path %>
+      </div>
+    </div>
+    <br><br>
     <%= yield %>
 
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
